@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Furry TD — 개인정보처리방침 및 이용약관 / Privacy Policy &amp; Terms of Use</title>
+<meta name="description" content="Furry TD 개인정보처리방침 및 이용약관 / Furry TD Privacy Policy &amp; Terms of Use">
+<!--
+  원본은 같은 폴더의 index.md 다. 본문을 고치면 두 파일을 함께 고친다(README.md 「고칠 때」).
+  외부 CSS · JS · 글꼴을 쓰지 않는 자체 완결형 페이지다. Jekyll 테마를 쓰지 않는다(.nojekyll).
+  게시 전: 「2-9」 한국어 · 영어 두 곳의 확정 전 상자(.todo)를 실제 문구로 바꾸고, 시행일(초안 2026-09-22)을 실제 게시일로 바꾼다.
+-->
+<style>
+  :root{
+    --bg:#faf7f0; --fg:#2c2620; --muted:#6b6157; --line:#e4dccd; --card:#fffdf8;
+    --accent:#8a5a14; --accent-soft:rgba(138,90,20,.09); --leaf:#3f7a3a;
+    --todo-bg:#fff4d6; --todo-line:#d9a520; --todo-fg:#5a4300;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#1b1916; --fg:#e9e3d8; --muted:#a79d8f; --line:#3a342c; --card:#23201c;
+      --accent:#e2ad55; --accent-soft:rgba(226,173,85,.12); --leaf:#8fc586;
+      --todo-bg:#3a3014; --todo-line:#c99a2e; --todo-fg:#f3dfa6;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.75; font-size:16px; word-break:keep-all; overflow-wrap:anywhere;
+  }
+  .wrap{max-width:780px; margin:0 auto; padding:44px 20px 96px}
+  header.top{border-bottom:2px solid var(--line); padding-bottom:1.2em; margin-bottom:.4em}
+  h1{font-size:2rem; line-height:1.25; margin:0 0 .15em; letter-spacing:-.01em; color:var(--leaf)}
+  .subtitle{font-weight:700; font-size:1.05rem; margin:.1em 0 .9em}
+  dl.meta{display:grid; grid-template-columns:max-content 1fr; gap:.25em 1em; margin:0; font-size:.95rem}
+  dl.meta dt{color:var(--muted)} dl.meta dd{margin:0; font-weight:600}
+  nav.lang{margin:1.1em 0 0; display:flex; gap:.6em; flex-wrap:wrap}
+  nav.lang a{display:inline-block; padding:.45em 1.1em; border:1px solid var(--line); border-radius:999px;
+    background:var(--card); text-decoration:none; font-weight:700; min-height:44px; line-height:1.9}
+  h2{font-size:1.5rem; margin:2.2em 0 .5em; padding-bottom:.3em; border-bottom:2px solid var(--line)}
+  h3{font-size:1.18rem; margin:2em 0 .5em}
+  h4{font-size:1.02rem; margin:1.5em 0 .4em; color:var(--accent)}
+  h2,h3,h4{scroll-margin-top:16px}
+  p{margin:.7em 0} ul,ol{margin:.7em 0; padding-left:1.4em} li{margin:.35em 0}
+  a{color:var(--accent); text-underline-offset:2px}
+  code{background:var(--card); border:1px solid var(--line); border-radius:4px; padding:.05em .35em; font-size:.9em}
+  hr{border:0; border-top:1px solid var(--line); margin:2.6em 0}
+  nav.toc{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:.7em 1em; font-size:.95rem}
+  nav.toc ol{margin:.2em 0; padding-left:1.3em}
+  .tw{overflow-x:auto; margin:1em 0; -webkit-overflow-scrolling:touch; border:1px solid var(--line); border-radius:10px; background:var(--card)}
+  table{border-collapse:collapse; width:100%; min-width:560px; font-size:.93rem}
+  table.narrow{min-width:0}
+  th,td{padding:.6em .8em; border-bottom:1px solid var(--line); text-align:left; vertical-align:top}
+  th{background:var(--accent-soft); font-weight:700; white-space:nowrap}
+  tr:last-child td{border-bottom:0}
+  .todo{background:var(--todo-bg); color:var(--todo-fg); border:2px dashed var(--todo-line); border-radius:10px; padding:.8em 1em; margin:1em 0}
+  .todo strong{display:block; margin-bottom:.2em}
+  .credits p{margin:.3em 0}
+  .credits h4{color:var(--fg)}
+  .totop{margin-top:2em; font-size:.9rem}
+  @media (max-width:600px){
+    .wrap{padding:28px 16px 72px}
+    h1{font-size:1.6rem} h2{font-size:1.3rem} h3{font-size:1.1rem}
+    body{font-size:15px}
+    dl.meta{grid-template-columns:1fr} dl.meta dd{margin-bottom:.4em}
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<header class="top" id="top">
+<h1>Furry TD</h1>
+<p class="subtitle">개인정보처리방침 및 이용약관 / Privacy Policy &amp; Terms of Use</p>
+<dl class="meta">
+<dt>앱 / App</dt><dd>Furry TD (Android, <code>com.theleaf.furrytd</code>)</dd>
+<dt>개발자 / Developer</dt><dd>theleaf</dd>
+<dt>시행일 / Effective date</dt><dd>2026-09-22<!-- 초안 날짜. 게시할 때 실제 게시일로 바꿀 것 --></dd>
+<dt>문의 / Contact</dt><dd><a href="mailto:the.leaf.official.furrysurvival@gmail.com">the.leaf.official.furrysurvival@gmail.com</a></dd>
+</dl>
+<nav class="lang" aria-label="Language"><a href="#ko" lang="ko">한국어</a><a href="#en" lang="en">English</a></nav>
+</header>
+
+<!-- ========================= 한국어 ========================= -->
+<section id="ko" lang="ko">
+<h2>한국어</h2>
+
+<nav class="toc" aria-label="목차">
+<strong>목차</strong>
+<ol>
+<li><a href="#ko-about">게임 소개</a></li>
+<li><a href="#ko-privacy">개인정보처리방침</a></li>
+<li><a href="#ko-terms">이용약관</a></li>
+<li><a href="#ko-ads">광고 및 인앱결제</a></li>
+<li><a href="#ko-credits">크레딧</a></li>
+<li><a href="#ko-contact">문의</a></li>
+</ol>
+</nav>
+
+<h3 id="ko-about">1. 게임 소개</h3>
+<p>Furry TD 는 theleaf 가 만든 1인용 타워디펜스 게임입니다. 길 옆 석판을 눌러 동물 타워를 세우고, 웨이브 시작 버튼을 눌러 몰려오는 적을 막습니다. 타워를 다시 누르면 업그레이드하거나 팔 수 있고, 같은 동물 둘을 끌어 합치면 등급이 오릅니다(1성~5성).</p>
+<p>여우 · 곰 · 원숭이 · 상어 · 거북 · 고양이 여섯 동물은 역할이 다릅니다. 여우는 여럿을 동시에 때리고, 곰은 한 마리에 큰 피해를 주되 공중은 때리지 못합니다. 원숭이는 공중만 노리고, 상어는 적을 느리게 만들고, 거북은 둘레의 타워를 강하게 하고, 고양이는 주변까지 함께 때립니다.</p>
+<p>쉬움 · 보통 · 어려움에 각각 20개, 모두 60개의 맵이 있고, 한 판은 지상 · 공중 · 보스 적이 나오는 30개 웨이브로 이루어집니다. 특정 조합을 갖추면 보상을 주는 히든 미션도 있습니다. 적이 도착점을 지나면 라이프가 줄고, 라이프가 0 이 되면 판이 끝납니다. 화면 언어는 한국어와 영어를 지원합니다.</p>
+
+<h3 id="ko-privacy">2. 개인정보처리방침</h3>
+<p>이 개인정보처리방침은 Furry TD(이하 "게임")를 이용할 때 어떤 정보가 어디에 저장되고 누가 처리하는지 설명합니다.</p>
+
+<h4 id="ko-summary">2-1. 한눈에 보기</h4>
+<ul>
+<li>회원가입 · 로그인이 없고, 게임은 이름 · 전화번호 · 이메일 같은 개인정보를 입력받지 않습니다.</li>
+<li>개발자가 운영하는 서버가 없습니다. 진행 상황 · 설정 · 구매한 상품의 목록은 이용자의 기기에 저장되며, 게임은 이를 개발자에게 보내지 않습니다.</li>
+<li>보상형 광고를 위해 Google Mobile Ads SDK(Google AdMob)가 들어 있습니다. Google 은 광고 제공 · 성과 측정 · 부정 사용 방지를 위해 기기 식별자, IP 주소 등 정보를 수집할 수 있습니다(<a href="#ko-third">2-4</a>).</li>
+<li>인앱결제는 Google Play 가 처리합니다. 카드 번호 같은 결제 수단 정보는 개발자에게 제공되지 않습니다(<a href="#ko-developer">2-3</a>, <a href="#ko-third">2-4</a>).</li>
+<li>이용자가 문의처로 이메일을 보내면, 개발자는 답변과 요청 처리를 위해 그 이메일 주소와 내용을 받습니다(<a href="#ko-developer">2-3</a>).</li>
+</ul>
+
+<h4 id="ko-device">2-2. 기기에 저장되는 정보</h4>
+<p>게임은 아래 정보를 기기 안의 이 앱 전용 저장 공간(Unity PlayerPrefs, Android 의 SharedPreferences)에 저장합니다. 게임은 이 정보를 개발자에게 보내지 않습니다.</p>
+<div class="tw"><table>
+<tr><th>항목</th><th>내용</th><th>쓰는 곳</th></tr>
+<tr><td>진행 기록</td><td>최고 도달 웨이브</td><td>기록용으로 저장합니다(버전 1.0 에서는 화면에 표시하지 않습니다)</td></tr>
+<tr><td>마지막 선택</td><td>마지막으로 고른 난이도, 난이도별로 마지막으로 플레이한 맵</td><td>다음 실행 때 같은 자리에서 시작</td></tr>
+<tr><td>설정</td><td>음량(전체 · 배경음악 · 효과음), 화면 언어(직접 고른 경우에만 저장)</td><td>설정 유지</td></tr>
+<tr><td>구매한 상품의 목록</td><td>스토어가 확인해 준 구매 상품의 이름 목록(예: 광고 제거)</td><td>혜택 적용. 결제 정보나 영수증은 저장하지 않습니다. 지워져도 스토어 확인으로 다시 채워집니다</td></tr>
+</table></div>
+<ul>
+<li>앞으로 넣을 기능(메타 강화, 최고 스테이지)을 위한 저장 항목이 코드에 정의되어 있지만, 버전 1.0 은 이 항목을 저장하지 않습니다.</li>
+<li>Google 의 광고 SDK 와 동의 도구(UMP)는 이용자의 동의 · 거부 선택과 광고 기능에 필요한 값을 같은 기기 안에 따로 저장합니다. 이 값은 Google 이 관리합니다.</li>
+<li>iOS 판을 제공하는 경우, 결제 연동 모듈(Unity IAP)이 같은 거래를 두 번 처리하지 않도록 거래 번호 기록을 기기에 남길 수 있습니다.</li>
+<li>Android 기기에서 Google 백업을 켜 둔 경우, Android 운영체제가 이 앱의 데이터를 이용자 본인의 Google 계정 백업에 포함할 수 있습니다. 이 백업은 이용자의 Google 계정으로 보호되며, 개발자는 볼 수 없습니다.</li>
+<li>게임을 삭제하거나 앱 데이터를 지우면 위 정보도 함께 지워집니다.</li>
+</ul>
+
+<h4 id="ko-developer">2-3. 개발자가 받는 정보</h4>
+<ol>
+<li><strong>문의 이메일</strong> — 이용자가 문의처로 이메일을 보내면, 개발자는 그 이메일 주소와 이메일에 담긴 내용(적어 주신 이름, 문의 내용, 첨부한 스크린샷이나 기기 정보 등)을 받습니다. 답변과 요청(버그 확인, 삭제 요청 등) 처리에만 쓰고, 광고나 마케팅에 쓰지 않습니다. 문의 메일은 개발자가 사용하는 이메일 서비스(Gmail)에 보관됩니다.</li>
+<li><strong>Google Play 판매 기록</strong> — 인앱 상품을 구매하면, Google Play 는 판매 관리 · 정산 · 세금 · 환불 처리를 위해 개발자에게 판매 기록(예: 주문 번호, 상품, 결제 금액과 통화, 주문 일시, 기기 모델, 구매자의 국가 · 시/도 · 우편번호)을 제공합니다. 개발자는 이 기록을 그 목적에만 씁니다. 카드 번호 같은 결제 수단 정보는 개발자에게 제공되지 않습니다.</li>
+<li><strong>통계 · 보고서</strong> — AdMob 은 광고 노출 수 · 수익 같은 집계 보고서를, Google Play 는 설치 수 · 평점과 (기기에서 사용 및 진단 정보 공유에 동의한 경우) 비정상 종료 · 응답 없음 보고서 같은 통계를 개발자에게 제공합니다. 개발자는 이 보고서로 이용자 개인을 찾지 않으며, 광고 SDK 가 수집한 이용자별 정보를 따로 받지 않습니다.</li>
+</ol>
+<p>개발자는 이 정보를 다른 곳에 팔거나 제공하지 않습니다. 다만 법령에 따라 제출할 의무가 있는 경우는 예외입니다.</p>
+
+<h4 id="ko-third">2-4. 제3자 서비스가 처리하는 정보</h4>
+<p>게임에는 아래 서비스가 들어 있습니다. 각 서비스는 <strong>자체 개인정보처리방침</strong>에 따라 정보를 처리합니다. 게임에는 분석(애널리틱스) · 계정 연동 SDK 가 들어 있지 않습니다.</p>
+<div class="tw"><table>
+<tr><th>서비스</th><th>처리될 수 있는 정보와 목적</th><th>정책</th></tr>
+<tr><td><strong>Google Mobile Ads SDK</strong> (Google AdMob, 보상형 광고) · <strong>User Messaging Platform</strong> (UMP, 동의 도구)</td><td>Google 공개 자료에 따르면 IP 주소(대략적인 위치 추정에 쓰일 수 있음), 앱 실행 · 탭 · 동영상 시청 같은 이용 상호작용, 앱과 SDK 의 성능 같은 진단 정보, 광고 ID 등 기기 식별자를 광고 제공 · 분석 · 부정 사용 방지를 위해 수집하며, 전송 중에는 암호화합니다. 이 정보는 Google 및 동의 양식에 표시되는 광고 기술 제공자가 받을 수 있습니다. 동의 도구는 이용자의 지역 확인과 동의 · 거부 선택의 기록에 필요한 정보를 처리합니다.</td><td><a href="https://policies.google.com/technologies/partner-sites">Google 이 파트너 앱의 정보를 사용하는 방법</a> · <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a></td></tr>
+<tr><td><strong>Google Play 결제</strong></td><td>결제 처리와 구매 내역 확인에 필요한 정보(결제 수단 · Google 계정 등). 게임은 스토어가 알려 주는 구매 내역(상품 · 구매 상태 · 영수증)을 기기 안에서 확인해 혜택을 적용할 뿐, 개발자 서버로 보내지 않습니다.</td><td><a href="https://policies.google.com/privacy">Google 개인정보처리방침</a> · <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&amp;ldt=privacynotice">Google 결제 개인정보처리방침</a></td></tr>
+<tr><td><strong>Unity IAP</strong> (In-App Purchasing 5.3, 결제 연동)</td><td>Unity 문서에 따르면 5.4 보다 앞선 버전은 이용자의 개인정보를 수집하지 않습니다. 이 게임은 Unity 의 분석 · 서버 검증 기능을 켜지 않았습니다.</td><td><a href="https://docs.unity.com/en-us/iap/privacy-and-consent/legacy-overview">Unity IAP 개인정보 개요(5.4 이전)</a> · <a href="https://unity.com/legal/privacy-policy">Unity 개인정보처리방침</a></td></tr>
+<tr><td><strong>Unity</strong> (게임 엔진)</td><td>이 게임은 Unity Analytics · 오류 보고(Cloud Diagnostics) · 성능 보고 서비스를 켜지 않았습니다. 엔진이 처리하는 정보가 있다면 Unity 의 정책을 따릅니다.</td><td><a href="https://unity.com/legal/privacy-policy">Unity 개인정보처리방침</a></td></tr>
+</table></div>
+
+<h4 id="ko-choices">2-5. 광고 개인정보 선택</h4>
+<ul>
+<li><strong>유럽경제지역(EEA) · 영국 · 스위스</strong> — 법이 동의를 요구하는 지역에서는 타이틀 화면에서 Play 를 누를 때 Google 의 공식 동의 양식(UMP)이 먼저 뜹니다. 동의하거나, 동의하지 않거나, 세부 옵션을 고를 수 있습니다. 동의하지 않아도 게임은 그대로 이용할 수 있습니다. 다만 광고를 불러올 수 없으면 광고 보고 부활을 쓸 수 없을 수 있습니다.</li>
+<li><strong>미국의 일부 주</strong> — 설정의 <strong>[Privacy]</strong> 버튼(→ <strong>광고 개인정보 설정</strong>) 또는 타이틀 Info 의 <strong>광고 개인정보 설정</strong> 버튼에서 Google 의 공식 화면을 열어 "Do Not Sell or Share My Personal Information"(개인정보 판매 · 공유 거부)를 고를 수 있습니다. 게임에 포함된 Google 광고 SDK 는 광고를 위해 정보를 수집 · 공유할 수 있고, 개발자는 광고 수익을 받습니다. 일부 주의 법은 이를 개인정보의 '판매' 또는 '공유' 로 볼 수 있어 이 선택을 제공합니다.</li>
+<li><strong>나중에 바꾸기</strong> — 설정(타이틀 화면에서 Play 를 누르면 나오는 난이도 선택 화면의 Setting)에서 <strong>[Privacy]</strong> 버튼을 누르면 선택지를 설명하는 화면이 열리고, 그 안의 <strong>광고 개인정보 설정</strong> 버튼으로 Google 의 공식 화면을 다시 열 수 있습니다. 타이틀 Info 의 <strong>광고 개인정보 설정</strong> 버튼도 같은 화면을 엽니다. 두 버튼은 Google 의 동의 도구가 이용자의 지역에 필요하다고 알려 줄 때만 표시되며, 어느 선택지가 보일지도 Google 이 이용자의 지역에 따라 정합니다(게임 언어와는 무관합니다). Google 의 양식은 게임 언어가 아니라 기기 언어와 Google 의 설정에 따라 표시될 수 있습니다. 설정과 Info 는 판을 진행하는 도중에는 열 수 없습니다.</li>
+<li><strong>Android 광고 ID</strong> — 기기 설정(보통 설정 &gt; 개인정보 보호 &gt; 광고, 기기마다 다를 수 있음)에서 광고 ID 를 재설정하거나 삭제할 수 있습니다. <a href="https://support.google.com/ads/answer/1660762">Google 도움말</a></li>
+<li><strong>구매와 별개</strong> — 광고 개인정보 선택은 구매한 상품의 혜택에 영향을 주지 않고, 구매도 광고 개인정보 선택을 바꾸지 않습니다. '광고 제거'를 구매하면 게임은 광고를 요청하지 않지만, 광고 SDK 는 앱에 포함되어 있어 앱을 켤 때 동의 정보 확인과 SDK 초기화가 이루어질 수 있습니다.</li>
+</ul>
+
+<h4 id="ko-retention">2-6. 보관 기간과 삭제</h4>
+<p>개발자가 요청을 받아 직접 지울 수 있는 것은 이용자가 보낸 문의 메일입니다. 그 밖의 정보는 아래와 같이 보관 · 삭제됩니다.</p>
+<ul>
+<li><strong>기기에 저장된 정보</strong> — 게임을 삭제하거나 앱 데이터를 지울 때까지 기기에 남습니다. 이용자가 직접 지울 수 있고, 개발자는 이 정보를 가지고 있지 않습니다. 구매한 상품의 목록은 지워도 같은 스토어 계정으로 게임을 켜면 스토어 확인으로 다시 채워집니다.</li>
+<li><strong>문의 이메일</strong> — 답변과 그 문의의 후속 처리에 필요한 동안만 보관하고, 필요가 없어지면 삭제합니다. 이용자가 삭제를 요청하면 법령상 보관 의무가 없는 한 지체 없이 삭제합니다. 삭제 요청은 <a href="#ko-contact">6. 문의</a>의 주소로, 문의에 썼던 이메일 주소에서 보내 주세요.</li>
+<li><strong>Google Play 판매 기록</strong> — Google Play 가 제공하는 기록이며, 정산 · 세금 · 환불 처리와 법령이 정한 보관에 필요한 동안 보관합니다.</li>
+<li><strong>광고 SDK · 결제 서비스가 처리하는 정보</strong> — Google 이 가지고 있으며 Google 의 보관 정책을 따릅니다. 개발자는 이 정보를 가지고 있지 않아 이용자를 대신해 지울 수 없습니다. <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에 안내된 Google 의 도구로 직접 요청하거나, 기기 설정에서 Android 광고 ID 를 재설정 · 삭제하거나, 위 <a href="#ko-choices">2-5</a> 의 광고 개인정보 선택을 이용해 주세요.</li>
+</ul>
+
+<h4 id="ko-rights">2-7. 이용자의 권리</h4>
+<ul>
+<li><strong>요청할 수 있는 것</strong> — 이용자는 개발자가 가지고 있는 자신의 개인정보(주로 보내신 문의 메일)의 열람 · 정정 · 삭제를 요청할 수 있고, 처리의 제한을 요청하거나 처리에 이의를 제기할 수 있으며, 동의에 근거한 처리는 동의를 철회할 수 있습니다. 요청은 <a href="#ko-contact">6. 문의</a>의 주소로, 가능하면 문의에 썼던 이메일 주소에서 보내 주세요. 요청을 받으면 관련 법령에 따라 처리합니다. 법령상 보관 의무가 있는 정보는 그 기간 동안 삭제하지 못할 수 있습니다.</li>
+<li><strong>광고 동의의 철회 · 변경</strong> — 광고를 위한 동의는 위 <a href="#ko-choices">2-5</a> 의 광고 개인정보 설정에서 철회하거나 바꿀 수 있습니다.</li>
+<li><strong>Google 이 가진 정보</strong> — Google 광고 SDK 가 수집한 정보는 Google 이 자체 <a href="https://policies.google.com/privacy">개인정보처리방침</a>에 따라 처리하며, 개발자는 이 정보를 가지고 있지 않습니다. 이 정보에 대한 요청은 Google 에 직접 해 주세요.</li>
+<li><strong>처리의 근거</strong> — Google 광고 SDK 의 처리는, 법이 요구하는 지역에서는 Google 의 동의 양식(UMP)으로 받은 이용자의 동의에 근거하고, 그 밖의 경우에는 Google 이 자체 정책에서 설명하는 근거를 따릅니다. 문의 메일은 이용자의 요청에 답하기 위해 처리합니다.</li>
+<li><strong>국외 이전</strong> — Google 은 이 정보를 미국과 그 밖의 여러 나라에서 처리할 수 있습니다. 문의 메일을 보관하는 Gmail 도 Google 의 서비스입니다.</li>
+<li><strong>민원</strong> — 이용자는 거주하는 나라의 개인정보 감독기관에 민원을 제기할 수 있습니다(예: 유럽경제지역 · 영국 · 스위스에서는 해당 국가의 감독기관, 한국에서는 개인정보보호위원회).</li>
+</ul>
+
+<h4 id="ko-security">2-8. 안전한 처리</h4>
+<ul>
+<li>게임은 개인정보를 네트워크로 개발자에게 보내지 않습니다. 게임 안에서 링크를 누르면 기기의 브라우저가 열릴 뿐입니다.</li>
+<li>기기에 저장된 정보는 이 앱 전용 저장 공간에 있어, 일반적인 경우 다른 앱이 읽을 수 없습니다.</li>
+<li>구매는 기기 안에서 스토어의 서명으로 확인하며, 영수증을 개발자 서버로 보내지 않습니다.</li>
+<li>Google 공개 자료에 따르면 Google Mobile Ads SDK 가 수집하는 정보는 전송 중 TLS 로 암호화됩니다.</li>
+<li>문의 이메일은 개발자가 관리하는 이메일 계정에 보관하며, 문의 대응 외의 목적으로 열람하거나 공유하지 않습니다.</li>
+</ul>
+
+<h4 id="ko-children">2-9. 아동의 개인정보</h4>
+<!-- [게시 전 확정 필요] 대상 연령 미확정. 문구 후보(A · B)와 주의점은 index.md 의 같은 절 주석에 있다. 확정 문구로 바꾼 뒤 이 주석과 아래 상자를 지운다. -->
+<div class="todo" role="note"><strong>[게시 전 확정 필요]</strong>이 절은 Google Play Console 의 대상 연령 설정과 광고 설정이 확정된 뒤 작성합니다. 확정 전에는 이 페이지를 공개하지 않습니다.</div>
+
+<h4 id="ko-changes">2-10. 방침 변경</h4>
+<p>이 방침이 바뀌면 이 페이지에 바뀐 내용과 시행일을 게시합니다.</p>
+
+<h3 id="ko-terms">3. 이용약관</h3>
+<ol>
+<li>본 게임을 설치하고 이용하는 경우 아래 약관에 동의한 것으로 봅니다. 동의하지 않으시면 이용을 중단하고 삭제해 주세요.</li>
+<li>본 게임은 개인적 · 비상업적 용도로만 이용할 수 있으며, 판매가 아닌 이용 허락(라이선스)입니다.</li>
+<li>게임 또는 그 일부를 개조, 역분석, 디컴파일, 재배포, 재판매할 수 없습니다.</li>
+<li>치트, 자동화 도구, 메모리 변조 등 정상적인 플레이를 변경하는 행위를 금지합니다.</li>
+<li>게임에 포함된 그림, 음악, 효과음, 텍스트, 캐릭터, 코드 등 모든 콘텐츠는 저작권으로 보호되며 각 권리자에게 귀속됩니다.</li>
+<li>제3자가 만든 음악 · 효과음 등에는 위 5항과 별개로 각자의 라이선스가 그대로 적용됩니다. <a href="#ko-credits">5. 크레딧</a>에 제작자와 라이선스를 적어 두었으며, 본 약관은 그 권리를 제한하지 않습니다.</li>
+<li>게임 밸런스, 콘텐츠, 기능은 업데이트를 통해 언제든지 변경될 수 있습니다.</li>
+<li>저장 데이터는 기기 내부에 보관됩니다. 게임 삭제, 앱 데이터 초기화, 기기 변경 시 진행 상황이 영구적으로 사라질 수 있으며 복구를 보장하지 않습니다.</li>
+<li>본 게임은 "있는 그대로" 제공되며 어떠한 보증도 하지 않습니다. 관련 법령이 허용하는 범위에서, 게임 이용으로 발생한 손해에 대해 개발자는 책임을 지지 않습니다.</li>
+</ol>
+
+<h3 id="ko-ads">4. 광고 및 인앱결제</h3>
+<h4 id="ko-ads-ad">4-1. 광고</h4>
+<ul>
+<li>광고는 판에서 졌을 때 '광고 보고 부활'을 직접 고른 경우에만 재생됩니다(보상형 광고, 판마다 한 번). 끝까지 보면 실패한 웨이브를 그 웨이브가 시작되기 전 상태에서 다시 도전합니다.</li>
+<li>시청은 선택 사항입니다. 보지 않거나 중간에 닫으면 부활하지 않고, 그 밖의 불이익은 없습니다. 그 밖의 화면에는 광고가 나오지 않습니다(배너 · 전면 광고 없음).</li>
+<li>광고를 불러올 수 없을 때(예: 인터넷 연결이 없을 때)는 광고 부활 버튼이 잠기며, 게임의 다른 기능은 그대로 이용할 수 있습니다.</li>
+</ul>
+
+<h4 id="ko-ads-iap">4-2. 인앱결제 상품</h4>
+<p>상품은 셋이며, 모두 <strong>한 번 사면 영구히 적용되는 비소모성 상품</strong>입니다(구독 · 소모성 아님).</p>
+<div class="tw"><table class="narrow">
+<tr><th>상품</th><th>혜택</th></tr>
+<tr><td>광고 제거</td><td>패배 뒤 부활할 때 광고 없이 부활합니다. 부활은 여전히 판마다 한 번입니다.</td></tr>
+<tr><td>고속 플레이</td><td>모든 맵에서 3배속을 쓸 수 있습니다. 1배속 · 2배속은 무료입니다.</td></tr>
+<tr><td>스타터 팩</td><td>광고 제거와 고속 플레이, 두 혜택 모두입니다.</td></tr>
+</table></div>
+<ul>
+<li>가격은 각 스토어가 보여 주는 현지 가격이며, 실제 결제 금액도 스토어가 정합니다. 결제는 이용자의 스토어 계정으로 이루어집니다.</li>
+<li>광고 제거나 고속 플레이 중 하나라도 이미 가지고 있으면, 같은 혜택에 두 번 결제하지 않도록 스타터 팩은 구매할 수 없습니다.</li>
+<li>결제가 승인 대기 중인 동안(예: 보호자 승인)에는 혜택이 적용되지 않으며, 스토어가 결제를 확인한 뒤 적용됩니다.</li>
+</ul>
+
+<h4 id="ko-ads-restore">4-3. 구매 복원 · 환불</h4>
+<ul>
+<li>게임을 다시 설치하거나 기기를 바꿔도 같은 스토어 계정이면 게임을 켤 때 지난 구매를 확인해 자동으로 되살립니다. 확인하지 못했을 때는 Shop 을 열면 다시 확인합니다. 별도의 '구매 복원' 버튼이나 게임 계정은 없습니다.</li>
+<li>이미 확인된 구매의 혜택은 인터넷 연결이 없어도 기기에 저장된 목록으로 유지됩니다.</li>
+<li>Google Play 와 App Store 사이에는 구매가 옮겨지지 않습니다.</li>
+<li>환불은 각 스토어의 정책과 절차를 따릅니다. 환불 · 취소가 확정된 구매의 혜택은 해제될 수 있습니다.</li>
+</ul>
+
+<h3 id="ko-credits">5. 크레딧</h3>
+<div class="credits">
+<p>Unity 로 제작했습니다. 글꼴: Nunito, 학교안심 둥근미소. 광고: Google Mobile Ads SDK (Google AdMob). 결제: Unity In-App Purchasing.</p>
+<p>이 게임에 사용된 음악과 효과음의 권리는 각 제작자에게 있습니다. 제3자 자료에는 아래의 개별 라이선스가 적용되며, 본 약관은 그 권리를 제한하지 않습니다. 게임 안 Info 의 크레딧에도 같은 내용이 있습니다.</p>
+
+<h4>BGM — PeriTune</h4>
+<ul>
+<li>제작자: PeriTune / Sei Mutsuki — <a href="https://peritune.com/">peritune.com</a></li>
+<li>라이선스: <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a> · <a href="https://creativecommons.org/licenses/by/4.0/deed.ko">한국어 안내</a></li>
+<li>곡: <a href="https://peritune.com/blog/2016/10/03/otogi/">Otogi</a> · <a href="https://peritune.com/blog/2016/04/27/resort4/">Resort4</a> · <a href="https://peritune.com/blog/2021/12/24/powder_snow/">Powder_Snow</a> · <a href="https://peritune.com/blog/2024/04/25/nocturnal_bloom/">Nocturnal_Bloom</a> · <a href="https://peritune.com/blog/2016/09/27/spook3/">Spook3</a></li>
+<li>변경 사항: 제작자가 배포한 루프 버전 OGG를 사용했습니다. 원본 오디오의 컷 편집, 리믹스, 피치 변경은 하지 않았습니다.</li>
+</ul>
+
+<h4>BGM — Imataku</h4>
+<ul>
+<li>제작자: Imataku · 배포: OpenTracks (구 DOVA-SYNDROME) · <a href="https://opentracks.com/en/help/articles/license/">이용조건</a></li>
+<li>곡: <a href="https://opentracks.com/bgm/detail/23388">Ohisama to Shippo</a> · <a href="https://opentracks.com/bgm/detail/23386">Dojikko Happening</a> · <a href="https://opentracks.com/bgm/detail/23387">Ohiru no Soyokaze</a></li>
+</ul>
+
+<h4>효과음 — Sound Effect Lab (효과음라보)</h4>
+<ul>
+<li>제작 · 배포: Sound Effect Lab — <a href="https://soundeffect-lab.info/">soundeffect-lab.info</a> · <a href="https://soundeffect-lab.info/agreement/">이용조건</a></li>
+<li>히든 미션 달성, 몬스터 피격, 라이프 손실, 여우 · 곰 · 원숭이 · 상어 · 고양이 공격 효과음에 사용했습니다.</li>
+</ul>
+
+<h4>효과음 — Pixabay</h4>
+<ul>
+<li>배포: Pixabay (Content License) · <a href="https://pixabay.com/service/license-summary/">라이선스 요약</a></li>
+<li><a href="https://pixabay.com/sound-effects/film-special-effects-level-up-191997/">Level Up</a> — Universfield (타워 업그레이드)</li>
+<li><a href="https://pixabay.com/sound-effects/film-special-effects-fail-trombone-229173/">Fail Trombone</a> — Universfield (판 실패 · 부활 제안)</li>
+<li><a href="https://pixabay.com/sound-effects/musical-victory-bell-success-fanfare-576275/">Victory Bell Success Fanfare</a> — Emand_Edroff (판 클리어). 변경 사항: 원본의 2초 이후 구간만 사용했습니다(앞 2초 제외, 시작 8ms · 끝 40ms 페이드).</li>
+<li><a href="https://pixabay.com/sound-effects/household-hammer-6145/">Hammer</a> — freesound_community / olliehahn12 (타워 건설). 변경 사항: 앞의 무음을 덜어내고 망치 소리 두 번만 남긴 뒤 타격 간격을 줄였습니다(0.39초, 4ms 크로스페이드, 끝 20ms 페이드).</li>
+<li><a href="https://pixabay.com/sound-effects/film-special-effects-holy-healing-spell-533279/">Holy Healing Spell</a> — Coghezzi (거북 타워 선택)</li>
+</ul>
+
+<h4>효과음 — 거북 타워 공격</h4>
+<ul>
+<li>같은 개발사의 전작 Furry Survival 에서 사용한 효과음을 옮겨 왔습니다.</li>
+</ul>
+
+<h4>BGM — 웨이브 전투곡</h4>
+<ul>
+<li>ぷにぷに警報 — 제작자: takai / 音楽の卵 · <a href="https://ontama-m.com/ongaku_rpg_battle.html">배포 페이지</a> · <a href="https://ontama-m.com/ongaku.html">이용 약관</a></li>
+<li>상업적 이용 무료 · 출처 표기 선택</li>
+<li>변경 사항: 원본 파일을 그대로 사용하며, 재생할 때 도입부(3.223초) 이후 구간만 되풀이합니다.</li>
+</ul>
+</div>
+
+<h3 id="ko-contact">6. 문의</h3>
+<p>문의 · 버그 제보 · 개인정보 문의(보내신 문의 메일의 삭제 요청 포함): <strong><a href="mailto:the.leaf.official.furrysurvival@gmail.com">the.leaf.official.furrysurvival@gmail.com</a></strong></p>
+<ul>
+<li>개발자: theleaf. 개인정보 관련 문의와 <a href="#ko-rights">2-7. 이용자의 권리</a>의 요청도 위 주소로 받습니다.</li>
+<li>Google 이 처리하는 광고 · 결제 정보에 관한 요청은 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에 안내된 방법으로 Google 에 직접 하실 수 있습니다.</li>
+</ul>
+<p class="totop"><a href="#top">맨 위로</a> · <a href="#en" lang="en">English</a></p>
+</section>
+
+<hr>
+
+<!-- ========================= English ========================= -->
+<section id="en" lang="en">
+<h2>English</h2>
+
+<nav class="toc" aria-label="Contents">
+<strong>Contents</strong>
+<ol>
+<li><a href="#en-about">About the Game</a></li>
+<li><a href="#en-privacy">Privacy Policy</a></li>
+<li><a href="#en-terms">Terms of Use</a></li>
+<li><a href="#en-ads">Ads and In-App Purchases</a></li>
+<li><a href="#en-credits">Credits</a></li>
+<li><a href="#en-contact">Contact</a></li>
+</ol>
+</nav>
+
+<h3 id="en-about">1. About the Game</h3>
+<p>Furry TD is a single-player tower defense game made by theleaf. Tap the stone slabs beside the path to build animal towers, then press the Start Wave button to hold back the incoming enemies. Tap a tower again to upgrade or sell it, and drag two of the same animal together to raise its tier (Tier 1 to 5).</p>
+<p>Each of the six animals — Fox, Bear, Monkey, Shark, Turtle, and Cat — has its own role. The Fox hits several enemies at once, and the Bear deals heavy damage to a single enemy but can't hit flying ones. The Monkey targets only flying enemies, the Shark slows enemies down, the Turtle strengthens nearby towers, and the Cat also damages enemies around its target.</p>
+<p>There are twenty maps each on Easy, Normal, and Hard, sixty in total, and each run consists of 30 waves of ground, flying, and boss enemies. Hidden missions give rewards for building certain combinations. You lose Life whenever an enemy passes the goal, and the run ends when your Life reaches 0. The game is available in Korean and English.</p>
+
+<h3 id="en-privacy">2. Privacy Policy</h3>
+<p>This Privacy Policy explains what information is stored where, and who processes it, when you use Furry TD (the "Game").</p>
+
+<h4 id="en-summary">2-1. Summary</h4>
+<ul>
+<li>There is no account sign-up or login, and the Game does not ask for personal information such as your name, phone number, or email address.</li>
+<li>The developer does not operate any server. Your progress, settings, and the list of products you purchased are stored on your device, and the Game does not send them to the developer.</li>
+<li>The Game includes the Google Mobile Ads SDK (Google AdMob) for rewarded ads. Google may collect information such as device identifiers and your IP address to serve ads, measure performance, and prevent fraud (<a href="#en-third">2-4</a>).</li>
+<li>In-app purchases are handled by Google Play. Payment method information such as card numbers is not provided to the developer (<a href="#en-developer">2-3</a>, <a href="#en-third">2-4</a>).</li>
+<li>If you email the contact address, the developer receives your email address and the contents of your message to reply and handle your request (<a href="#en-developer">2-3</a>).</li>
+</ul>
+
+<h4 id="en-device">2-2. Information stored on your device</h4>
+<p>The Game stores the following information in this app's private storage on your device (Unity PlayerPrefs, which is SharedPreferences on Android). The Game does not send this information to the developer.</p>
+<div class="tw"><table>
+<tr><th>Item</th><th>Details</th><th>Used for</th></tr>
+<tr><td>Progress</td><td>Best wave reached</td><td>Kept as a record (not shown on screen in version 1.0)</td></tr>
+<tr><td>Last choices</td><td>The difficulty you last chose and the map you last played on each difficulty</td><td>Starting where you left off</td></tr>
+<tr><td>Settings</td><td>Volume (master, music, sound effects) and display language (saved only if you choose it)</td><td>Keeping your settings</td></tr>
+<tr><td>List of purchased products</td><td>The names of the products the store confirmed you bought (for example, Remove Ads)</td><td>Applying benefits. Payment information and receipts are not stored. If the list is deleted, it is filled in again when the store confirms your purchases</td></tr>
+</table></div>
+<ul>
+<li>Storage items for future features (meta upgrades and the highest stage) are defined in the code, but version 1.0 does not store them.</li>
+<li>Google's ad SDK and consent tool (UMP) separately store your consent choices and values needed for ad features on the same device. Google manages these values.</li>
+<li>If an iOS version is offered, the purchase module (Unity IAP) may keep a record of transaction numbers on the device so that the same transaction is not processed twice.</li>
+<li>If Google backup is turned on for your Android device, the Android operating system may include this app's data in your own Google Account backup. That backup is protected by your Google Account, and the developer cannot see it.</li>
+<li>Deleting the Game or clearing its app data also deletes this information.</li>
+</ul>
+
+<h4 id="en-developer">2-3. Information the developer receives</h4>
+<ol>
+<li><strong>Inquiry emails</strong> — If you email the contact address, the developer receives your email address and the contents of your email (any name you give, your message, and any attached screenshots or device details). It is used only to reply and handle your request (such as checking a bug or a deletion request), not for advertising or marketing. Inquiry emails are kept in the email service the developer uses (Gmail).</li>
+<li><strong>Google Play sales records</strong> — When you buy an in-app product, Google Play provides the developer with sales records for sales management, payouts, taxes, and refunds (for example, order number, product, amount and currency, order date and time, device model, and the buyer's country, city or state, and postal code). The developer uses these records only for those purposes. Payment method information such as card numbers is not provided to the developer.</li>
+<li><strong>Statistics and reports</strong> — AdMob provides the developer with aggregated reports such as ad impressions and earnings, and Google Play provides statistics such as install counts, ratings, and (where users have agreed on their device to share usage and diagnostics data) crash and "app not responding" reports. The developer does not use these reports to identify individual users and does not separately receive the per-user information collected by the ad SDK.</li>
+</ol>
+<p>The developer does not sell or provide this information to anyone else, except where required to do so by law.</p>
+
+<h4 id="en-third">2-4. Information processed by third-party services</h4>
+<p>The Game includes the services below. Each processes information under <strong>its own privacy policy</strong>. The Game does not include any analytics or account-linking SDKs.</p>
+<div class="tw"><table>
+<tr><th>Service</th><th>Information that may be processed, and why</th><th>Policy</th></tr>
+<tr><td><strong>Google Mobile Ads SDK</strong> (Google AdMob, rewarded ads) · <strong>User Messaging Platform</strong> (UMP, consent tool)</td><td>According to Google's published information, the SDK collects your IP address (which may be used to estimate general location), usage interactions such as app launches, taps, and video views, diagnostic information such as app and SDK performance, and device identifiers such as the advertising ID, for advertising, analytics, and fraud prevention, and encrypts it in transit. Recipients of this information may include Google and the ad technology providers listed in the consent form. The consent tool processes the information needed to determine your region and record your consent choices.</td><td><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a> · <a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
+<tr><td><strong>Google Play Billing</strong></td><td>Information needed to process payments and check purchase history (payment method, Google Account, and so on). The Game only checks the purchase history the store provides (product, purchase state, receipt) on your device to apply benefits, and does not send it to a developer server.</td><td><a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&amp;ldt=privacynotice">Google Payments Privacy Notice</a></td></tr>
+<tr><td><strong>Unity IAP</strong> (In-App Purchasing 5.3, purchase integration)</td><td>According to Unity's documentation, versions earlier than 5.4 do not collect any personal data about users. The Game does not turn on Unity's analytics or server-side verification features.</td><td><a href="https://docs.unity.com/en-us/iap/privacy-and-consent/legacy-overview">Unity IAP privacy overview (before 5.4)</a> · <a href="https://unity.com/legal/privacy-policy">Unity Privacy Policy</a></td></tr>
+<tr><td><strong>Unity</strong> (game engine)</td><td>The Game does not turn on Unity Analytics, error reporting (Cloud Diagnostics), or performance reporting. Any information the engine processes follows Unity's policy.</td><td><a href="https://unity.com/legal/privacy-policy">Unity Privacy Policy</a></td></tr>
+</table></div>
+
+<h4 id="en-choices">2-5. Your ad privacy choices</h4>
+<ul>
+<li><strong>European Economic Area (EEA), the UK, and Switzerland</strong> — In regions where the law requires consent, Google's official consent form (UMP) appears first when you tap Play on the title screen. You can consent, not consent, or manage your options. You can keep playing even if you do not consent. However, if ads cannot be loaded, the watch-ad revive may be unavailable.</li>
+<li><strong>Some US states</strong> — From the <strong>[Privacy]</strong> button in Settings (→ <strong>Ad privacy options</strong>) or the <strong>Ad privacy options</strong> button in the title screen's Info, you can open Google's official screen and choose "Do Not Sell or Share My Personal Information". The Google ad SDK included in the Game may collect and share information for advertising, and the developer receives ad revenue. The laws of some states may treat this as a "sale" or "sharing" of personal information, so this choice is provided.</li>
+<li><strong>Changing your choices later</strong> — In Settings (the Setting button on the difficulty selection screen that appears after you tap Play on the title screen), tap the <strong>[Privacy]</strong> button to open a page that explains your choices, and use the <strong>Ad privacy options</strong> button on that page to reopen Google's official screen. The <strong>Ad privacy options</strong> button in the title screen's Info opens the same screen. Both buttons appear only when Google's consent tool indicates that they are needed in your region, and Google decides which choices are shown based on your region (not on the game language). Google's forms may be shown in your device language and according to Google's settings rather than in the game language. Settings and Info cannot be opened during a run.</li>
+<li><strong>Android advertising ID</strong> — You can reset or delete your advertising ID in your device settings (usually Settings &gt; Privacy &gt; Ads; this may differ by device). <a href="https://support.google.com/ads/answer/1660762">Google Help</a></li>
+<li><strong>Independent of purchases</strong> — Your ad privacy choices do not affect the benefits of products you purchased, and purchases do not change your ad privacy choices. If you buy Remove Ads, the Game does not request ads, but because the ad SDK is part of the app, consent information checks and SDK initialization may still take place when the app starts.</li>
+</ul>
+
+<h4 id="en-retention">2-6. Retention and deletion</h4>
+<p>On request, the developer can directly delete the inquiry emails you sent. Other information is kept and deleted as described below.</p>
+<ul>
+<li><strong>Information stored on your device</strong> — It stays on your device until you delete the Game or clear its app data. You can delete it yourself; the developer does not hold it. If the list of purchased products is deleted, it is filled in again when you start the Game with the same store account and the store confirms your purchases.</li>
+<li><strong>Inquiry emails</strong> — Kept only as long as needed to reply and follow up on that inquiry, and deleted when no longer needed. If you ask for deletion, it is deleted without delay unless the law requires it to be kept. Please send deletion requests to the address in <a href="#en-contact">6. Contact</a> from the email address you used for your inquiry.</li>
+<li><strong>Google Play sales records</strong> — These are provided by Google Play and kept as long as needed for payouts, taxes, refunds, and retention required by law.</li>
+<li><strong>Information processed by the ad SDK and payment services</strong> — Held by Google and follows Google's retention policies. The developer does not hold this information and cannot delete it on your behalf. Please make a request directly with Google's tools described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, reset or delete your Android advertising ID in your device settings, or use the ad privacy choices in <a href="#en-choices">2-5</a> above.</li>
+</ul>
+
+<h4 id="en-rights">2-7. Your rights</h4>
+<ul>
+<li><strong>What you can request</strong> — You can ask for access to, correction of, or deletion of the personal information about you that the developer holds (mainly the inquiry emails you sent), ask for its processing to be restricted or object to its processing, and withdraw your consent where processing is based on consent. Please send requests to the address in <a href="#en-contact">6. Contact</a>, if possible from the email address you used for your inquiry. Requests are handled in accordance with applicable law. Information that the law requires to be kept may not be deletable during the required period.</li>
+<li><strong>Withdrawing or changing ad consent</strong> — You can withdraw or change your consent for ads with the ad privacy options in <a href="#en-choices">2-5</a> above.</li>
+<li><strong>Information held by Google</strong> — Information collected by the Google ad SDK is processed by Google under its own <a href="https://policies.google.com/privacy">Privacy Policy</a>, and the developer does not hold it. Please make requests about that information directly to Google.</li>
+<li><strong>Legal basis</strong> — For the Google ad SDK, processing is based on the consent you give through Google's consent form (UMP) in regions where the law requires it, and otherwise on the bases Google describes in its own policies. Inquiry emails are processed to respond to your request.</li>
+<li><strong>International transfers</strong> — Google may process this information in the United States and other countries. Gmail, where inquiry emails are kept, is also a Google service.</li>
+<li><strong>Complaints</strong> — You can lodge a complaint with the data protection authority where you live (for example, the relevant supervisory authority in the EEA, the UK, or Switzerland, or the Personal Information Protection Commission in Korea).</li>
+</ul>
+
+<h4 id="en-security">2-8. Secure handling</h4>
+<ul>
+<li>The Game does not send personal information to the developer over the network. Tapping a link in the Game only opens your device's browser.</li>
+<li>Information stored on your device is kept in this app's private storage, which other apps normally cannot read.</li>
+<li>Purchases are checked on your device using the store's signature, and receipts are not sent to a developer server.</li>
+<li>According to Google's published information, the information collected by the Google Mobile Ads SDK is encrypted in transit using TLS.</li>
+<li>Inquiry emails are kept in an email account managed by the developer and are not viewed or shared for any purpose other than handling inquiries.</li>
+</ul>
+
+<h4 id="en-children">2-9. Children's privacy</h4>
+<!-- [게시 전 확정 필요] 한국어 2-9 와 같은 문구로 바꾼 뒤 이 주석과 아래 상자를 지운다. -->
+<div class="todo" role="note"><strong>[To be finalized before publication]</strong>This section will be written after the target age group in Google Play Console and the ad settings are finalized. This page will not be published before then.</div>
+
+<h4 id="en-changes">2-10. Changes to this policy</h4>
+<p>If this policy changes, the updated text and effective date will be posted on this page.</p>
+
+<h3 id="en-terms">3. Terms of Use</h3>
+<ol>
+<li>By installing and using this game, you are deemed to agree to the terms below. If you do not agree, please stop using the game and delete it.</li>
+<li>This game may be used for personal, non-commercial purposes only, and it is licensed to you, not sold.</li>
+<li>You may not modify, reverse engineer, decompile, redistribute, or resell the game or any part of it.</li>
+<li>Cheats, automation tools, memory tampering, and any other acts that alter normal play are prohibited.</li>
+<li>All content in the game, including artwork, music, sound effects, text, characters, and code, is protected by copyright and belongs to its respective rights holders.</li>
+<li>Music, sound effects, and other material made by third parties remain under their own licenses, separately from section 5 above. The creators and licenses are listed in <a href="#en-credits">5. Credits</a>, and these terms do not restrict those rights.</li>
+<li>Game balance, content, and features may change at any time through updates.</li>
+<li>Save data is stored on your device. If you delete the game, clear the app data, or change devices, your progress may be permanently lost, and recovery is not guaranteed.</li>
+<li>This game is provided "as is" without any warranty. To the extent permitted by applicable law, the developer is not liable for any damages arising from the use of the game.</li>
+</ol>
+
+<h3 id="en-ads">4. Ads and In-App Purchases</h3>
+<h4 id="en-ads-ad">4-1. Ads</h4>
+<ul>
+<li>Ads play only when you choose "Watch Ad &amp; Revive" after losing a run (a rewarded ad, once per run). If you watch it to the end, you retry the lost wave from the state just before that wave started.</li>
+<li>Watching is optional. If you don't watch, or close the ad partway, you won't revive, and there is no other penalty. No ads appear on any other screen (no banner or interstitial ads).</li>
+<li>When an ad can't be loaded (for example, without an internet connection), the ad revive button is locked, and the rest of the Game works as usual.</li>
+</ul>
+
+<h4 id="en-ads-iap">4-2. In-app products</h4>
+<p>There are three products, and each is a <strong>non-consumable product that applies permanently after a single purchase</strong> (no subscriptions or consumables).</p>
+<div class="tw"><table class="narrow">
+<tr><th>Product</th><th>Benefit</th></tr>
+<tr><td>Remove Ads</td><td>Revive without an ad after losing. Reviving is still limited to once per run.</td></tr>
+<tr><td>3× Speed</td><td>Use 3× speed on every map. 1× and 2× speed are free.</td></tr>
+<tr><td>Starter Pack</td><td>Both benefits: Remove Ads and 3× Speed.</td></tr>
+</table></div>
+<ul>
+<li>Prices are the local prices shown by each store, and the store also determines the amount actually charged. Payment is made through your store account.</li>
+<li>If you already own Remove Ads or 3× Speed, the Starter Pack cannot be bought, so that you never pay twice for the same benefit.</li>
+<li>While a payment is pending approval (for example, a parent's approval), the benefit is not applied; it is applied after the store confirms the payment.</li>
+</ul>
+
+<h4 id="en-ads-restore">4-3. Restoring purchases and refunds</h4>
+<ul>
+<li>Even if you reinstall the Game or change devices, as long as you use the same store account, your previous purchases are checked and restored automatically when you start the Game. If they couldn't be checked, they will be checked again when you open the Shop. There is no separate "Restore Purchases" button and no game account.</li>
+<li>Benefits of purchases that have already been confirmed stay available without an internet connection, using the list stored on your device.</li>
+<li>Purchases do not transfer between Google Play and the App Store.</li>
+<li>Refunds follow each store's policies and procedures. Benefits of a purchase whose refund or cancellation has been confirmed may be removed.</li>
+</ul>
+
+<h3 id="en-credits">5. Credits</h3>
+<div class="credits">
+<p>Made with Unity. Fonts: Nunito, Hakgyoansim Dunggeunmiso. Ads: Google Mobile Ads SDK (Google AdMob). Payments: Unity In-App Purchasing.</p>
+<p>The rights to the music and sound effects used in this game belong to their respective creators. The individual licenses below apply to third-party material, and these terms do not restrict those rights. The same information appears in the credits in the Game's Info.</p>
+
+<h4>BGM — PeriTune</h4>
+<ul>
+<li>Creator: PeriTune / Sei Mutsuki — <a href="https://peritune.com/">peritune.com</a></li>
+<li>License: <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a></li>
+<li>Tracks: <a href="https://peritune.com/blog/2016/10/03/otogi/">Otogi</a> · <a href="https://peritune.com/blog/2016/04/27/resort4/">Resort4</a> · <a href="https://peritune.com/blog/2021/12/24/powder_snow/">Powder_Snow</a> · <a href="https://peritune.com/blog/2024/04/25/nocturnal_bloom/">Nocturnal_Bloom</a> · <a href="https://peritune.com/blog/2016/09/27/spook3/">Spook3</a></li>
+<li>Changes: We used the loop-version OGG files distributed by the creator. The original audio was not cut, remixed, or pitch-shifted.</li>
+</ul>
+
+<h4>BGM — Imataku</h4>
+<ul>
+<li>Creator: Imataku · Distributed by: OpenTracks (formerly DOVA-SYNDROME) · <a href="https://opentracks.com/en/help/articles/license/">Terms of use</a></li>
+<li>Tracks: <a href="https://opentracks.com/bgm/detail/23388">Ohisama to Shippo</a> · <a href="https://opentracks.com/bgm/detail/23386">Dojikko Happening</a> · <a href="https://opentracks.com/bgm/detail/23387">Ohiru no Soyokaze</a></li>
+</ul>
+
+<h4>Sound Effects — Sound Effect Lab</h4>
+<ul>
+<li>Created and distributed by: Sound Effect Lab — <a href="https://soundeffect-lab.info/">soundeffect-lab.info</a> · <a href="https://soundeffect-lab.info/agreement/">Terms of use</a></li>
+<li>Used for the hidden mission, monster hit, and life loss sounds, and for the Fox, Bear, Monkey, Shark, and Cat attack sounds.</li>
+</ul>
+
+<h4>Sound Effects — Pixabay</h4>
+<ul>
+<li>Distributed by: Pixabay (Content License) · <a href="https://pixabay.com/service/license-summary/">License summary</a></li>
+<li><a href="https://pixabay.com/sound-effects/film-special-effects-level-up-191997/">Level Up</a> — Universfield (tower upgrade)</li>
+<li><a href="https://pixabay.com/sound-effects/film-special-effects-fail-trombone-229173/">Fail Trombone</a> — Universfield (run failed / revive offer)</li>
+<li><a href="https://pixabay.com/sound-effects/musical-victory-bell-success-fanfare-576275/">Victory Bell Success Fanfare</a> — Emand_Edroff (run cleared). Changes: Only the part after the first 2 seconds of the original is used (first 2 seconds removed, 8 ms fade-in and 40 ms fade-out).</li>
+<li><a href="https://pixabay.com/sound-effects/household-hammer-6145/">Hammer</a> — freesound_community / olliehahn12 (tower build). Changes: The leading silence was trimmed, only two hammer strikes were kept, and the gap between them was shortened (0.39 s, 4 ms crossfade, 20 ms fade-out).</li>
+<li><a href="https://pixabay.com/sound-effects/film-special-effects-holy-healing-spell-533279/">Holy Healing Spell</a> — Coghezzi (Turtle tower selected)</li>
+</ul>
+
+<h4>Sound Effects — Turtle Tower Attack</h4>
+<ul>
+<li>Carried over from Furry Survival, a previous game by the same developer.</li>
+</ul>
+
+<h4>BGM — Wave Battle Theme</h4>
+<ul>
+<li><span lang="ja">ぷにぷに警報</span> — Creator: takai / <span lang="ja">音楽の卵</span> · <a href="https://ontama-m.com/ongaku_rpg_battle.html">Download page</a> · <a href="https://ontama-m.com/ongaku.html">Terms of use</a></li>
+<li>Free for commercial use · Attribution optional</li>
+<li>Changes: The original file is used as is; during playback, only the part after the intro (3.223 s) is looped.</li>
+</ul>
+</div>
+
+<h3 id="en-contact">6. Contact</h3>
+<p>Inquiries · bug reports · privacy questions (including requests to delete your inquiry emails): <strong><a href="mailto:the.leaf.official.furrysurvival@gmail.com">the.leaf.official.furrysurvival@gmail.com</a></strong></p>
+<ul>
+<li>Developer: theleaf. Privacy questions and the requests in <a href="#en-rights">2-7. Your rights</a> are also handled at the address above.</li>
+<li>For requests about ad and payment information processed by Google, you can contact Google directly as described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+</ul>
+<p class="totop"><a href="#top">Back to top</a> · <a href="#ko" lang="ko">한국어</a></p>
+</section>
+
+</main>
+</body>
+</html>
